@@ -2,7 +2,12 @@
 
 [Datahike](https://github.com/replikativ/datahike) with [Redis](https://github.com/antirez/redis/) as data storage.
 
+
 ## Usage
+
+Add to your dependencies:
+
+[![Clojars Project](https://img.shields.io/clojars/v/io.replikativ/datahike-redis.svg)](https://clojars.org/io.replikativ/datahike-redis)
 
 After including the datahike API and the datahike-redis namespace, you can use the Redis backend now using the keyword `:redis`
 
