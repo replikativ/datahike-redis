@@ -1,8 +1,11 @@
 (ns datahike-redis.core
-  (:require [datahike.store :refer [empty-store delete-store connect-store default-config config-spec release-store]]
+  (:require [datahike.store :refer [empty-store delete-store connect-store default-config config-spec release-store store-identity]]
             [datahike.config :refer [map-from-env]]
             [konserve-redis.core :as k]
             [clojure.spec.alpha :as s]))
+
+(defmethod store-identity :redis [store-config]
+  [:redis (:uri store-config)])
 
 (defmethod empty-store :redis [store-config]
   (k/connect-store store-config))
