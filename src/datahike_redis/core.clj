@@ -21,7 +21,7 @@
 (s/def :datahike.store.redis/backend #{:redis})
 (s/def :datahike.store.redis/uri string?)
 (s/def ::redis (s/keys :req-un [:datahike.store.redis/backend]
-                      :opt-un [:datahike.store.redis/uri]))
+                       :opt-un [:datahike.store.redis/uri]))
 
 (defmethod config-spec :redis [_] ::redis)
 
