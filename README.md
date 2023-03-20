@@ -38,7 +38,7 @@ keyword `:redis`. If you want to use other backends than S3 please refer to the 
               [datahike-redis.core]))
 
   (def cfg {:store {:backend :redis
-                    :bucket "redis://localhost:9475"}})
+                    :uri "redis://localhost:9475"}})
 
   ;; Create a database at this place, by default configuration we have a strict
   ;; schema validation and keep historical data
